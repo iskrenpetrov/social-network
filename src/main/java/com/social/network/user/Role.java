@@ -13,10 +13,10 @@ import static com.social.network.user.Permission.ADMIN_CREATE;
 import static com.social.network.user.Permission.ADMIN_DELETE;
 import static com.social.network.user.Permission.ADMIN_READ;
 import static com.social.network.user.Permission.ADMIN_UPDATE;
-import static com.social.network.user.Permission.MANAGER_CREATE;
-import static com.social.network.user.Permission.MANAGER_DELETE;
-import static com.social.network.user.Permission.MANAGER_READ;
-import static com.social.network.user.Permission.MANAGER_UPDATE;
+import static com.social.network.user.Permission.MODERATOR_CREATE;
+import static com.social.network.user.Permission.MODERATOR_DELETE;
+import static com.social.network.user.Permission.MODERATOR_READ;
+import static com.social.network.user.Permission.MODERATOR_UPDATE;
 
 @RequiredArgsConstructor
 public enum Role {
@@ -28,20 +28,30 @@ public enum Role {
                   ADMIN_UPDATE,
                   ADMIN_DELETE,
                   ADMIN_CREATE,
-                  MANAGER_READ,
-                  MANAGER_UPDATE,
-                  MANAGER_DELETE,
-                  MANAGER_CREATE
+                  MODERATOR_READ,
+                  MODERATOR_UPDATE,
+                  MODERATOR_DELETE,
+                  MODERATOR_CREATE
           )
   ),
-  MANAGER(
+  MODERATOR(
           Set.of(
-                  MANAGER_READ,
-                  MANAGER_UPDATE,
-                  MANAGER_DELETE,
-                  MANAGER_CREATE
+                  MODERATOR_READ,
+                  MODERATOR_UPDATE,
+                  MODERATOR_DELETE,
+                  MODERATOR_CREATE
           )
   )
+
+//  USER(
+//          Set.of(
+//                  USER_CREATE,
+//                  USER_READ,
+//                  USER_UPDATE,
+//                  USER_DELETE
+//
+//       )
+//  )
 
   ;
 
