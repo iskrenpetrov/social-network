@@ -4,6 +4,7 @@ import com.social.network.config.JwtService;
 import com.social.network.token.Token;
 import com.social.network.token.TokenRepository;
 import com.social.network.token.TokenType;
+import com.social.network.user.Role;
 import com.social.network.user.User;
 import com.social.network.user.UserRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -26,6 +27,7 @@ public class AuthenticationService {
   private final PasswordEncoder passwordEncoder;
   private final JwtService jwtService;
   private final AuthenticationManager authenticationManager;
+  private final Role defaultRole = Role.USER;
 
   public AuthenticationResponse register(RegisterRequest request) {
     var user = User.builder()
@@ -33,7 +35,7 @@ public class AuthenticationService {
         .lastname(request.getLastname())
         .email(request.getEmail())
         .password(passwordEncoder.encode(request.getPassword()))
-        .role(request.getRole())
+        .role(defaultRole)
         .build();
     var savedUser = repository.save(user);
     var jwtToken = jwtService.generateToken(user);

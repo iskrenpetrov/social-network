@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/management")
-@Tag(name = "Management")
-public class ManagementController {
+@RequestMapping("/api/v1/moderator")
+@Tag(name = "Moderator")
+public class ModeratorController {
 
 
     @Operation(
-            description = "Get endpoint for manager",
-            summary = "This is a summary for management get endpoint",
+            description = "Get endpoint for moderator",
+            summary = "This is a summary for moderator get endpoint",
             responses = {
                     @ApiResponse(
                             description = "Success",
@@ -33,18 +33,18 @@ public class ManagementController {
     )
     @GetMapping
     public String get() {
-        return "GET:: management controller";
+        return "GET:: moderator controller";
     }
     @PostMapping
     public String post() {
-        return "POST:: management controller";
+        return "POST:: moderator controller";
     }
     @PutMapping
     public String put() {
-        return "PUT:: management controller";
+        return "PUT:: moderator controller";
     }
     @DeleteMapping
     public String delete() {
-        return "DELETE:: management controller";
+        return "DELETE:: moderator controller";
     }
 }

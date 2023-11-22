@@ -27,7 +27,6 @@ public class SecurityApplication {
 					.lastname("Admin")
 					.email("admin@mail.com")
 					.password("password")
-					.role(Role.ADMIN)
 					.build();
 			System.out.println("Admin token: " + service.register(admin).getAccessToken());
 
@@ -36,7 +35,6 @@ public class SecurityApplication {
 					.lastname("Admin")
 					.email("manager@mail.com")
 					.password("password")
-					.role(Role.MANAGER)
 					.build();
 			System.out.println("Manager token: " + service.register(manager).getAccessToken());
 
