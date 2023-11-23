@@ -1,6 +1,6 @@
 package com.social.network.auditing;
 
-import com.social.network.user.User;
+import com.social.network.model.User;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;

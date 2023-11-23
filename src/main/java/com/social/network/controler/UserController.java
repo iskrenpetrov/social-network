@@ -1,5 +1,7 @@
-package com.social.network.user;
+package com.social.network.controler;
 
+import com.social.network.dto.ChangePasswordRequest;
+import com.social.network.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PatchMapping;

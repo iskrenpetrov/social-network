@@ -1,4 +1,4 @@
-package com.social.network.user;
+package com.social.network.constants;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

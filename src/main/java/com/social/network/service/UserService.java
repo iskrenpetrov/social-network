@@ -1,5 +1,8 @@
-package com.social.network.user;
+package com.social.network.service;
 
+import com.social.network.dto.ChangePasswordRequest;
+import com.social.network.model.User;
+import com.social.network.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;

@@ -1,6 +1,5 @@
 package com.social.network.auth;
 
-import com.social.network.user.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.social.network.user;
+package com.social.network.dto;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -8,7 +8,6 @@ import lombok.Setter;
 @Setter
 @Builder
 public class ChangePasswordRequest {
-
     private String currentPassword;
     private String newPassword;
     private String confirmationPassword;
