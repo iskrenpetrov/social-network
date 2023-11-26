@@ -1,5 +1,6 @@
-package com.social.network.user;
+package com.social.network.model;
 
+import com.social.network.constants.Permission;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -9,14 +10,14 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static com.social.network.user.Permission.ADMIN_CREATE;
-import static com.social.network.user.Permission.ADMIN_DELETE;
-import static com.social.network.user.Permission.ADMIN_READ;
-import static com.social.network.user.Permission.ADMIN_UPDATE;
-import static com.social.network.user.Permission.MODERATOR_CREATE;
-import static com.social.network.user.Permission.MODERATOR_DELETE;
-import static com.social.network.user.Permission.MODERATOR_READ;
-import static com.social.network.user.Permission.MODERATOR_UPDATE;
+import static com.social.network.constants.Permission.ADMIN_CREATE;
+import static com.social.network.constants.Permission.ADMIN_DELETE;
+import static com.social.network.constants.Permission.ADMIN_READ;
+import static com.social.network.constants.Permission.ADMIN_UPDATE;
+import static com.social.network.constants.Permission.MODERATOR_CREATE;
+import static com.social.network.constants.Permission.MODERATOR_DELETE;
+import static com.social.network.constants.Permission.MODERATOR_READ;
+import static com.social.network.constants.Permission.MODERATOR_UPDATE;
 
 @RequiredArgsConstructor
 public enum Role {

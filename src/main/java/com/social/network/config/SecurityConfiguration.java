@@ -1,7 +1,7 @@
 package com.social.network.config;
 
-import com.social.network.user.Permission;
-import com.social.network.user.Role;
+import com.social.network.constants.Permission;
+import com.social.network.model.Role;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

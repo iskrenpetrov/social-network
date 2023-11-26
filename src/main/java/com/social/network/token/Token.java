@@ -1,6 +1,6 @@
 package com.social.network.token;
 
-import com.social.network.user.User;
+import com.social.network.model.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

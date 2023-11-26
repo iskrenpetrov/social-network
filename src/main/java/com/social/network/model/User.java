@@ -1,19 +1,19 @@
-package com.social.network.user;
+package com.social.network.model;
 
-import com.mysql.cj.protocol.ColumnDefinition;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.social.network.model.Role;
 import com.social.network.token.Token;
 import jakarta.persistence.*;
 
 import java.util.Collection;
 import java.util.List;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-@Data
+@Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -34,6 +34,14 @@ public class User implements UserDetails {
 
   @OneToMany(mappedBy = "user")
   private List<Token> tokens;
+
+  @JsonIgnore
+  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+  private List<Comment> comments;
+
+  @JsonIgnore
+  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+  private List<Post> posts;
 
   @Override
   public Collection<? extends GrantedAuthority> getAuthorities() {
